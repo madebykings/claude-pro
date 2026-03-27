@@ -21,8 +21,58 @@ Do NOT jump straight into solving.
 
 ---
 
+## AUTO PROJECT DETECTION
+
+Before asking the user, attempt to detect the project automatically.
+
+Check:
+- repository name
+- folder names
+- known project patterns
+
+Mappings:
+
+- "aab" or "adopt-a-brick" → projects/adopt-a-brick/PROJECT.md
+- "tradies" → projects/tradies-app/PROJECT.md
+- "daytrader" or "day-trader" → projects/day-trader/PROJECT.md
+- WordPress/WooCommerce repo → likely projects/agency/PROJECT.md
+
+If confident:
+- state detected project
+- ask for confirmation only
+
+Example:
+
+Detected project: Adopt a Brick  
+(using projects/adopt-a-brick/PROJECT.md)
+
+Confirm?
+
+If not confident:
+- fall back to asking the user
+
+---
+
+## REPO AWARENESS
+
+Always consider:
+- current repository context
+- project structure
+- naming conventions
+
+If a known project is detected, prioritise its PROJECT.md rules automatically.
+
+---
+
 ## STEP 1 — Identify Project
 
+Attempt auto-detection first.
+
+If detected:
+- state the project
+- ask for confirmation
+
+If not detected:
 Ask:
 
 Which project are we working on?
@@ -33,10 +83,6 @@ Options:
 - Agency work
 - Day Trader
 - Something new
-
-If "Something new":
-- ask for a short description
-- suggest creating a new project guide
 
 ---
 
